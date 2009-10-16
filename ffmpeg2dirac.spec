@@ -1,6 +1,6 @@
 Name:           ffmpeg2dirac
 Version:        0.1.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Convert any file that ffmpeg can decode to dirac or theora
 
 Group:          Applications/Multimedia
@@ -63,6 +63,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Oct 16 2009 kwizart <kwizart at gmail.com> - 0.1.0-4
+- Rebuild for F-12
+
 * Tue Apr 14 2009 kwizart < kwizart at gmail.com > - 0.1.0-3
 - Better scons scheme
 - Better description
