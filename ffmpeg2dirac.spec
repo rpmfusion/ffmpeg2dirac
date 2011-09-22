@@ -1,12 +1,13 @@
 Name:           ffmpeg2dirac
-Version:        0.1.0
-Release:        4%{?dist}
+Version:        0.2.0
+Release:        1%{?dist}
 Summary:        Convert any file that ffmpeg can decode to dirac or theora
 
 Group:          Applications/Multimedia
 License:        GPLv2+
 URL:            http://diracvideo.org
 Source0:        http://downloads.sourceforge.net/dirac/ffmpeg2dirac-%{version}.tar.gz
+Patch0:         ffmpeg2dirac-ffmpeg.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  scons
@@ -28,6 +29,7 @@ many people as possible to encode video clips with the same settings.
 
 %prep
 %setup -q
+%patch0 -p1 -b .ff08
 
 sed -i -e 's/1.0beta1/1.0/' SConstruct
 
@@ -63,6 +65,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Sep 22 2011 Nicolas Chauvet <kwizart@gmail.com> - 0.2.0-1
+- Update to 0.2.0
+- Add Patch for FFmpeg-0.8
+
 * Fri Oct 16 2009 kwizart <kwizart at gmail.com> - 0.1.0-4
 - Rebuild for F-12
 
