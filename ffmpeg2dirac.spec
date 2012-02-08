@@ -1,6 +1,6 @@
 Name:           ffmpeg2dirac
 Version:        0.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Convert any file that ffmpeg can decode to dirac or theora
 
 Group:          Applications/Multimedia
@@ -65,10 +65,19 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Feb 08 2012 Nicolas Chauvet <kwizart@gmail.com>
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
+<<<<<<< ffmpeg2dirac.spec
+* Sat Sep 03 2011 Nicolas Chauvet <kwizart@gmail.com> - 0.2.0-1
+- Update to 0.2.0
+
+=======
 * Thu Sep 22 2011 Nicolas Chauvet <kwizart@gmail.com> - 0.2.0-1
 - Update to 0.2.0
 - Add Patch for FFmpeg-0.8
 
+>>>>>>> 1.3
 * Fri Oct 16 2009 kwizart <kwizart at gmail.com> - 0.1.0-4
 - Rebuild for F-12
 
